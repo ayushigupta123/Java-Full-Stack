@@ -1,0 +1,49 @@
+For maven project.
+
+    Case Study 
+
+1.Create an application with below classes 
+
+
+  1.class Device 
+         |
+          ------------
+         deviceName
+         deviceType
+         no_of_days_for_rent
+      
+
+ 2.class Technician
+        |_______
+          technicianName
+          Device device
+
+  4.class Job
+           |
+            ----------
+            Technician technicianName
+            Location jobLocation
+         
+
+
+#create a collection of objects of above classes in call in main method 
+
+#The above project has to be created in maven 
+#package form should be jar 
+#main method has to be mentioned in POM.xml file 
+
+
+create maven project in eclipse
+
+execute following command in cmd
+mvn compile
+test
+package
+verify
+install deploy
+
+Add main in pom.xml
+
+then 
+mvn clean package
+java -jar jileFileName
