@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:context="http://www.springframework.org/schema/context"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd">
+
+<context:annotation-config/>
+
+<bean id="mydbinfo" class ="com.mybean.MyDbInfo">
+	<property name="myDbInfo" value="data_baseconnection to mysql"/>
+</bean>
+
+<bean id ="service_plan1" class="com.mybean.ServicePlan">
+	<property name="planName" value ="half yearly plan"/>
+	<property name ="validityDays" value="180" />
+	<property name="price" value="599"/>
+</bean>
+
+<bean id ="service_plan2" class="com.mybean.ServicePlan">
+	<property name="planName" value ="quaterly yearly plan"/>
+	<property name ="validityDays" value="90" />
+	<property name="price" value="299"/>
+</bean>
+
+<bean id="customer" class ="com.mybean.Customer" >
+	<property name="customerName" value="Peter jones"/>
+	<property name="emailId" value ="peter@gmail.com"/>
+	<property name="mobileNo" value="9807654321"/>
+	</bean>
+</beans>

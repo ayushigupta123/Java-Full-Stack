@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd"
+>
+
+<bean id ="location1" class="com.mybean.Location">
+	<property name="locationName" value ="Pune"/>
+</bean>
+
+<bean id="device1" class ="com.mybean.Device" >
+	<property name="deviceName" value="Mobile"/>
+	<property name="daysOnRent" value ="60"/>
+	<property name="location" ref="location1"/>
+</bean>
+
+<bean id="technician" class ="com.mybean.Technician" >
+	<property name="technicianName" value="Peter Jones"/>
+	<property name="device" ref="device1"/>
+</bean>
+
+</beans>
