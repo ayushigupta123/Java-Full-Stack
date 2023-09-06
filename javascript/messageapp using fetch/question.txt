@@ -1,0 +1,24 @@
+Model Class 
+
+    Message
+           messageId
+           sender
+           receiver
+           messageText
+
+
+http methods for controller 
+GetMapping
+ getAllMessages
+PostMapping
+   saveAMessage(Message msg)
+
+
+ClientSide 
+
+  Fetch function to view all data on html page 
+  Fetch to send data by accepting sendername and receiver name and messageText through text field and composing and sending a json 
+data to Server
+
+
+fetch to update data using Put/Patch
