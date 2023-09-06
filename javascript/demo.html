@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript String and Number Exercise</title>
+</head>
+<body>
+    <script>
+        var string1 = "Peter goes to school today ";
+        var string2 = "It is raining ";
+        var concatenatedString = string1 + string2;
+        console.log("Concatenated String:", concatenatedString);
+
+        var text = "Betty Botter bought som butter ,But this butter was bitter ,If she put's it in batter ,the batter will be bitter";
+        var extractedText = text.substring(5, 16);
+        console.log("Extracted Text:", extractedText);
+
+        var lastOccurrenceIndex = text.lastIndexOf("butter");
+        console.log("Last Occurrence of 'butter':", lastOccurrenceIndex);
+
+        var textArray = text.split(" ");
+        console.log("Text Array:", textArray);
+
+        var startIndex = text.indexOf("But this butter was bitter");
+        var endIndex = startIndex + "But this butter was bitter".length;
+        var extractedText2 = text.substring(startIndex, endIndex);
+        console.log("Extracted Text 2:", extractedText2);
+
+        var strnum = "133.45454";
+        var floatValue = parseFloat(strnum);
+        console.log("Float Value:", floatValue);
+
+        var roundedValue = floatValue.toFixed(3);
+        console.log("Rounded Value:", roundedValue);
+
+        var callDetails = {
+            callId: 1,
+            senderNumber: "9988333432",
+            receiverNumber: "9933234434",
+            message: "Hay There!",
+            messagelength: 12,
+            callQuality: "Excellent",
+            callDropRate: "20%",
+        };
+
+        callDetails.callPlan = "3GB/day";
+
+        function displayCallDetails() {
+            for (var key in callDetails) {
+                if (callDetails.hasOwnProperty(key)) {
+                    console.log(key + ": " + callDetails[key]);
+                }
+            }
+        }
+
+        console.log("Call Details Object:");
+        displayCallDetails();
+
+        var sum = 0;
+        for (var i = 1; i <= 10; i++) {
+            sum += i;
+        }
+        console.log("Sum of first 10 natural numbers:", sum);
+
+        //Sort an array
+        var numbers = [5, 2, 9, 1, 5, 6];
+        numbers.sort(function (a, b) {
+            return a - b;
+        });
+        console.log("Sorted Array:", numbers);
+
+        //Find the maximum value from an array using a while loop
+        var max = numbers[0];
+        var index = 1;
+        while (index < numbers.length) {
+            if (numbers[index] > max) {
+                max = numbers[index];
+            }
+            index++;
+        }
+        console.log("Maximum value in the array:", max);
+
+        function callQuality(callid, sender, receiver, droprate) {
+            this.callid = callid;
+            this.sender = sender;
+            this.receiver = receiver;
+            this.droprate = droprate;
+        }
+
+        var callQualityArray = [
+            new callQuality(1, "9988333432", "9933234434", "20%"),
+            new callQuality(2, "9876543210", "9876543211", "35%"),
+            new callQuality(3, "8888888888", "9999999999", "10%"),
+        ];
+
+        function checkDropRate(callQualityObj) {
+            if (parseInt(callQualityObj.droprate) > 30) {
+                console.log(`Drop rate for Call ID ${callQualityObj.callid} is above the acceptable level.`);
+            }
+        }
+
+        callQualityArray.forEach(checkDropRate);
+
+        console.log("Call Quality Objects:");
+        console.log(callQualityArray);
+
+    </script>
+</body>
+</html>
+
+

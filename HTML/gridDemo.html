@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Items Grid</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .grid-item {
+            background-color: brown;
+            color: red;
+            font-size: 30px;
+            padding: 15px;
+            border: 1px solid brown;
+            text-align: center;
+        }
+
+        form {
+            border: 3px solid brown;
+            padding: 20px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Items Grid</h1>
+
+<div class="grid-container">
+    <div class="grid-item">Coffee</div>
+    <div class="grid-item">Ice Tea</div>
+    <div class="grid-item">Espresso</div>
+    <div class="grid-item">Black Coffee</div>
+    <div class="grid-item">Latte</div>
+    <div class="grid-item">Cold Coffee</div>
+</div>
+
+</body>
+</html>

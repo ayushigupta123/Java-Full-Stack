@@ -1,0 +1,29 @@
+BookDetails {
+    font-family: Arial, sans-serif;
+    background-color: #75e549;
+    padding: 50px;
+}
+
+Book {
+    border: 1px solid #ccc;
+    padding: 30px;
+    margin: 30px;
+    background-color: rgb(230, 145, 189);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+BookId {
+    font-weight: bold;
+}
+
+BookName {
+    color: #0073e6;
+}
+
+Author {
+    font-style: italic;
+}
+
+Publisher {
+    color: #555;
+}
